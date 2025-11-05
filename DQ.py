@@ -106,14 +106,14 @@ def home_page():
 
     st.markdown("""
     ---
-    ### 🚀 How to Use This Tool
+    ### How to Use This Tool
     1. Navigate to the **Data Quality Analyzer** page using the dropdown in the sidebar.
     2. Upload your dataset (Excel or CSV).
     3. Choose which data quality dimension to analyze.
     4. View your calculated scores instantly!
 
     ---
-    💡 *Tip:* For best results, ensure your dataset is well-structured and column names are clearly labeled.
+    *Tip:* For best results, ensure your dataset is well-structured and column names are clearly labeled.
     """)
 
 
@@ -467,3 +467,4 @@ elif page == "Data Quality Analyzer":
     dq_page()
 elif page == "Power BI Connection Guide":
     powerbi_page()
+
