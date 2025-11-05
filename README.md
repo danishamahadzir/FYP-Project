@@ -1,2 +1,2 @@
 # FYP-Project
-Data Quality Tool
+Data Quality Tool : Measuring Data Quality Based on Completeness, Consistency & Uniqueness
