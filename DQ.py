@@ -16,22 +16,18 @@ st.set_page_config(
 # Use st.cache_resource to ensure a single database connection is created and reused.
 @st.cache_resource
 def init_connection():
-    """Initializes and returns the MySQL connection object."""
     try:
-        # Load credentials from st.secrets. This is secure and standard for Streamlit apps.
-        # NOTE: Using placeholder values for running outside a Streamlit environment
-        # Replace with st.secrets lookup when deploying
-        secrets = st.secrets.get("mysql", {})
+        secrets = st.secrets["mysql"]  # make sure name matches your Streamlit secrets section
         conn = mysql.connector.connect(
-            host=secrets.get("host", "localhost"),
-            database=secrets.get("database", "dq_db"),
-            user=secrets.get("user", "user"),
-            password=secrets.get("password", "password"),
+            host=secrets["host"],
+            database=secrets["database"],
+            user=secrets["user"],
+            password=secrets["password"],
             port=secrets.get("port", 3306)
         )
         return conn
     except Error as e:
-        st.error(f"Error connecting to MySQL database: {e}") 
+        st.error(f"Error connecting to MySQL database: {e}")
         return None
 
 def setup_database(conn):
@@ -533,3 +529,4 @@ elif page == "Data Quality Analyzer":
     dq_page()
 elif page == "Power BI Connection Guide (WIP)":
     powerbi_page()
+
