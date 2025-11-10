@@ -518,7 +518,7 @@ def powerbi_page():
 st.sidebar.title("Menu")
 page = st.sidebar.selectbox(
     "Select Page:",
-    ["Home Page", "Data Quality Analyzer", "Power BI Connection Guide"],
+    ["Home Page", "Data Quality Analyzer", "Power BI Connection Guide (WIP)"],
     index=1 # Default to Analyzer page for convenience
 )
 
@@ -529,4 +529,5 @@ elif page == "Data Quality Analyzer":
     dq_page()
 elif page == "Power BI Connection Guide (WIP)":
     powerbi_page()
+
 
