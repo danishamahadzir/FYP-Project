@@ -292,6 +292,7 @@ def home_page():
     2. Upload your dataset (Excel or CSV). The file name is used to group the scores in the database.
     3. Choose which data quality dimension to analyze.
     4. View your calculated scores instantly! All scores are **persisted to your MySQL database** for historical reporting.
+    5. Navigate to the **Data Quality Visualiser** page to monitor your data quality health and trends.
     """)
 
 def dq_page():
@@ -905,3 +906,4 @@ elif selected == "Data Quality Analyzer":
     dq_page()
 elif selected == "Data Quality Visualizer":
     dq_visualizer_page()
+
